@@ -1,17 +1,13 @@
 package br.com.dio.desafio.dominio;
 
-import java.time.LocalDate;
-
-
-public abstract class Mentoria extends conteudo {
+public abstract class conteudo {
 
     protected static final double XP_PADRAO = 10d;
 
     private String titulo;
     private String descricao;
 
-    public Mentoria() {
-    }
+    public abstract double calcularXp();
 
     public String getTitulo() {
         return titulo;
@@ -27,7 +23,7 @@ public abstract class Mentoria extends conteudo {
 
     @Override
     public String toString() {
-        return "Mentoria{" +
+        return "Conteudo{" +
                 "titulo='" + titulo + '\'' +
                 ", descricao='" + descricao + '\'' +
                 '}';
@@ -37,8 +33,5 @@ public abstract class Mentoria extends conteudo {
         this.descricao = descricao;
 
 
-    }
-
-    public void setData(LocalDate now) {
     }
 }
